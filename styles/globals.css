@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+  font-weight: 300;
+}
+
+svg * {
+  color: currentColor;
+}
+
+html, body {
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+p {
+  color: #767676;
+}
+
+small {
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #3955a8;
+}
+
+.container{
+  max-width: 1320px !important;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.main-btn {
+  padding: 15px 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  border: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  z-index: 0 !important;
+  background-color: #3955a8;
+  letter-spacing: .2px;
+  -webkit-box-shadow: 0px 7px 51px 0px rgb(31 18 253 / 12%);
+  box-shadow: 0px 7px 51px 0px rgb(31 18 253 / 12%);
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  color: #fff;
+  background-color: #1509d8;
+}
+
+.main-btn.white-btn {
+  background-color: #fff;
+  color: #3955a8;
+}
+
+.main-btn.white-btn:hover {
+  background-color: #ddd;
+}
+
+.sticked {
+  background: #fff;
+  box-shadow: 2px 0 10px #eee;
+}
+
+header * {
+  transition: all .3s ease-in-out;
+}
+
+.sticked .py-4 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.sticked img {
+  width: 200px;
+}
+
+
+#hero {
+  background-image: url('/img/header-bg-shape.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+#hero .hero-image {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-45%);
+  transform: translateY(-45%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#hero .hero-image img {
+  width: 50vw;
+}
+
+.feature-card {
+  min-height: 415px;
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 9px 54px 0px rgb(32 32 32 / 10%);
+  box-shadow: 0px 9px 54px 0px rgb(32 32 32 / 10%);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background-color: #fff;
+}
+
+.feature-card:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.about-content p {
+  margin-top: 25px;
+}
+
+.bg-main {
+  background: #3955a8;
+}
+
+#midPageCta {
+  position: relative;
+}
+
+#midPageCta::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url('/img/bg-ultrawide.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.our-process-number {
+  font-size: 300px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  line-height: 1em;
+  color: #666;
+  opacity: .05;
+}
+
+.form-control {
+  padding: 15px 25px;
+  color: #000;
+  background-color: #f7f8fb;
+  height: auto;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.with-error {
+  border: 1px solid red;
+}
+
+@media (max-width: 500px) {
+  body .navigation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0; top: 0;
+    width: 102%;
+    height: 100vh;
+    background: #223364;
+    transform: translateX(800px);
+    transition: all .4s ease-in-out;
+    z-index: 100;
+    padding-top: 50px;
+  }
+
+  body .navigation a {
+    color: #fff;
+    flex: none;
+    height: 50px;
+    line-height: 50px;
+    width: 101%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  body .close-nav-btn {
+    position: fixed;
+    right: 27px;
+    top: -1px;
+    width: 40px;
+    display: block;
+    color: #fff;
+    font-size: 40px;
+    z-index: 101;
+  }
+
+  body .navigation.open {
+    transform: translate(0);
+  }
+
+  body .responsive-btn span {
+    display: block;
+    width: 25px;
+    height: 8px;
+    border-top: 2px solid #444;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  #hero .hero-image {
+    top: 70%;
+  }
+}
